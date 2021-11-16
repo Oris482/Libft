@@ -6,36 +6,39 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/16 13:29:24 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/11/16 21:08:52 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
-NAME = libft.a
-INCS = includes/
-LIBC = ar -rc
+TARGET = libft.a
+HEADER = includes/
+AR = ar
+ARFLAGS = -rcs
 LIBR = ranlib
-SRC_DIR = ./src
-SRCS = $(notdir $(wildcard $(SRC_DIR)/*.c))
-OBJS = $(SRCS:.c=.o)
+SRCDIR = srcs
+OBJDIR = srcs
+SRCS = $(wildcard $(SRCDIR)/*.c)
+_OBJS = $(patsubst $(SRCDIR)/%.c, %.o, $(SRCS))
+OBJS = $(addprefix $(OBJDIR)/, $(_OBJS))
 
-.c.o: 
-		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I $(INCS)
+.PHONY: all clean fclean re
 
-$(NAME): $(OBJS)
-		$(LIBC) $(NAME) $(OBJS)
-		$(LIBR) $(NAME)
+all: $(TARGET)
 
-all: $(NAME)
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) -I$(HEADER) -c $< -o $@
 
-.PHONY: clean fclean all re .c.o
+$(TARGET): $(OBJS)
+	$(AR) $(ARFLAGS) $@ $^
+	$(LIBR) $@
 
 clean:
-		$(RM) $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-		$(RM) $(NAME)
+	$(RM) $(TARGET)
 
 re: fclean all
