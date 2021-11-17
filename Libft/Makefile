@@ -6,32 +6,32 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/16 21:08:52 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/11/17 10:19:54 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
-TARGET = libft.a
-HEADER = includes/
+NAME = libft.a
+HEADER = ./
 AR = ar
 ARFLAGS = -rcs
 LIBR = ranlib
-SRCDIR = srcs
-OBJDIR = srcs
+SRCDIR = .
+OBJDIR = .
 SRCS = $(wildcard $(SRCDIR)/*.c)
 _OBJS = $(patsubst $(SRCDIR)/%.c, %.o, $(SRCS))
 OBJS = $(addprefix $(OBJDIR)/, $(_OBJS))
 
 .PHONY: all clean fclean re
 
-all: $(TARGET)
+all: $(NAME)
 
 $(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) -I$(HEADER) -c $< -o $@
 
-$(TARGET): $(OBJS)
+$(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 	$(LIBR) $@
 
@@ -39,6 +39,6 @@ clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(TARGET)
+	$(RM) $(NAME)
 
 re: fclean all
