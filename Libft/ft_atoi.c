@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:34:30 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/17 21:48:53 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/18 20:20:26 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_atoi(const char *str)
 
 	result = 0;
 	sign = 1;
-	while (*str != 32)
+	while (*str == 32)
 		str++;
 	if (*str == '+' || *str == '-')
 	{
@@ -32,13 +32,4 @@ int	ft_atoi(const char *str)
 	}
 	result *= sign;
 	return (result);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	const char	*c = "  -123";
-	printf("-123 = %d", ft_atoi(c));
-	return (0);
 }
