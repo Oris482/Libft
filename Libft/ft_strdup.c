@@ -6,13 +6,13 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 10:52:12 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:19:35 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:27:54 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*copied;
 	size_t	size;

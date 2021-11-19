@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 20:43:39 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:18:27 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:25:56 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ void	ft_bzero(void *s, size_t n)
 	{
 		*temp = 0;
 		temp++;
+		n--;
 	}
 }

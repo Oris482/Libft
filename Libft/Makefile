@@ -6,7 +6,7 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/17 10:19:54 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/11/19 12:58:16 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ OBJS = $(addprefix $(OBJDIR)/, $(_OBJS))
 
 all: $(NAME)
 
-$(OBJS): $(SRCS)
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -I$(HEADER) -c $< -o $@
 
 $(NAME): $(OBJS)

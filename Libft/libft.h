@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:17:29 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:13:12 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:50:02 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
-char	*ft_strchr(const char *s, int c); 
+char	*ft_strchr(const char *s, int c);
 
 char	*ft_strrchr(const char *s, int c);
 
@@ -58,8 +58,8 @@ void	*ft_memcpy(void	*dst, const void *src, size_t n);
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
-void	*calloc(size_t count, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 
-char	*strdup(const char *s1);
+char	*ft_strdup(const char *s1);
 
 #endif
