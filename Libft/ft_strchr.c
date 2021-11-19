@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 18:08:50 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:19:55 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 16:51:34 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	while (*s != c)
 	{
-		if (*s == c)
-			return (s);
+		if (*s == '\0')
+			return (0);
 		s++;
 	}
-	return (0);
+	return ((char *)s);
 }

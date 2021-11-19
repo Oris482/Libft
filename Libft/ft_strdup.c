@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 10:52:12 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:27:54 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:16:24 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	char	*copied;
 	size_t	size;
-	int		idx;
+	size_t	idx;
 
 	size = ft_strlen(s1);
 	copied = (char *)malloc(size + 1);

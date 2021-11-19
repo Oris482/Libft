@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 20:49:58 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:19:06 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:37:10 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*tmp_dst;
 	const unsigned char	*tmp_src;
-	unsigned char		*cpy_src;
-	size_t				safe_len;
-	size_t				idx;
 
 	tmp_dst = (unsigned char *)dst;
-	tmp_src = (unsigned char *)src;
-	safe_len = len + 1;
-	idx = 0;
-	while (*src != '\0' && safe_len-- > 0)
-		cpy_src[idx++] = *tmp_src++;
-	while (len-- > 0)
-		*tmp_dst++ = *cpy_src++;
+	tmp_src = (const unsigned char *)src;
+	if (tmp_dst > tmp_src)
+	{
+		tmp_dst += len;
+		tmp_src += len;
+		while (len-- > 0)
+			*--tmp_dst = *--tmp_src;
+	}
+	else
+		while (len-- > 0)
+			*tmp_dst++ = *tmp_src++;
 	return (dst);
 }

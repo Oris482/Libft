@@ -6,14 +6,11 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:37:42 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/17 10:39:51 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:46:27 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c > 31 && c < 127)
-		return (c);
-	else
-		return (0);
+	return (c > 31 && c < 127);
 }

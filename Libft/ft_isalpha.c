@@ -6,16 +6,13 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:33:19 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:21:10 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:47:47 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if ((c > 100 && c < 133) || (c > 140 && c < 173))
-		return (c);
-	else
-		return (0);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

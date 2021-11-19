@@ -6,14 +6,11 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:22:25 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/17 10:32:22 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:46:06 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c > 47 && c < 58)
-		return (c);
-	else
-		return (0);
+	return (c > 47 && c < 58);
 }

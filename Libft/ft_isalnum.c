@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:32:42 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 11:21:18 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:49:50 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c > 47 && c < 58) || (c > 64 && c < 91) || (c > 96 && c < 123))
-		return (c);
-	else
-		return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

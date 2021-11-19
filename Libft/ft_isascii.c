@@ -6,14 +6,11 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:36:08 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/17 10:36:48 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:43:38 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (c);
-	else
-		return (0);
+	return (c >= 0 && c <= 127);
 }

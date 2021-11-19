@@ -6,14 +6,14 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:57:14 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/17 10:58:22 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:26:39 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c - 40);
+		return (c - 32);
 	else
 		return (c);
 }
