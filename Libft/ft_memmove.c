@@ -6,9 +6,11 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 20:49:58 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/18 21:14:07 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:19:06 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

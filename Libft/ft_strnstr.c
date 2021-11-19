@@ -6,9 +6,11 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:56:46 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/17 20:12:21 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:20:16 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_cmp(const char *haystack, const char *needle)
 {

@@ -6,12 +6,15 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:17:29 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/18 23:21:35 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:13:12 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 
@@ -54,5 +57,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void	*dst, const void *src, size_t n);
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
+
+void	*calloc(size_t count, size_t size);
+
+char	*strdup(const char *s1);
 
 #endif
