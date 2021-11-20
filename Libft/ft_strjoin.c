@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 12:05:26 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/20 13:59:52 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/20 15:24:33 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		joined[idx++] = *s2++;
 		s2_len--;
 	}
+	joined[idx] = '\0';
 	return (joined);
 }
