@@ -6,9 +6,11 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:34:30 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 14:29:13 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/22 21:51:04 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_isspace(char c)
 {
@@ -41,4 +43,28 @@ int	ft_atoi(const char *str)
 	}
 	result *= sign;
 	return (result);
+}
+
+int	main(void)
+{
+	int	a;
+	int	b;
+	int c;
+	int d;
+	char *s1;
+	char *s2;
+
+	s1 = "9223372036854775809";
+	s2 = "-9223372036854775810";
+	a = ft_atoi(s1);
+	b = ft_atoi(s2);
+	printf("%d\n%d\n", a, b);
+	c = atoi(s1);
+	d = atoi(s2);
+	printf("\n%d\n%d\n", c, d);
+	if (a == c)
+		printf("test success\n");
+	else
+		printf("fail\n");
+	return (0);
 }
