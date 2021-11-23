@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 10:17:29 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/23 15:38:12 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:05:45 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 int		ft_isalpha(int c);
 
