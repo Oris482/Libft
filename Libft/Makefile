@@ -6,13 +6,13 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/23 19:33:59 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/11/24 15:40:39 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -I./
+CFLAGS = -Wall -Wextra -Werror -I.
 NAME = libft.a
 AR = ar
 ARFLAGS = -rcs
@@ -52,15 +52,15 @@ SRCS = ft_memset.c	\
 		ft_putstr_fd.c	\
 		ft_putendl_fd.c	\
 		ft_putnbr_fd.c
-SRCS_BONUS = ft_lstnew.c		\
+SRCS_BONUS = ft_lstnew.c	\
 			 ft_lstadd_front.c	\
-			 ft_lstsize.c		
-#			 ft_lstlast.c		\
+			 ft_lstsize.c	\
+			 ft_lstlast.c	\
 			 ft_lstadd_back.c	\
-			 ft_lstclear.c		\
-			 ft_lstdelone.c		\
-			 ft_lstiter.c		\
-			 ft_lstmap.c#
+			 ft_lstdelone.c	\
+			 ft_lstclear.c	\
+			 ft_lstiter.c	\
+			 ft_lstmap.c
 _OBJS = $(SRCS:.c=.o)
 _OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 OBJS = $(addprefix $(OBJDIR)/, $(_OBJS))
@@ -70,7 +70,7 @@ OBJS_BONUS = $(addprefix $(OBJDIR)/, $(_OBJS_BONUS))
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) libft.h
 	$(AR) $(ARFLAGS) $@ $^
 
 clean:
@@ -82,5 +82,5 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJS_BONUS) $(OBJS)
+bonus: $(OBJS_BONUS) $(OBJS) libft.h
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS) $(OBJS)

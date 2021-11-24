@@ -35,10 +35,23 @@ ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK]
 ft_lstnew:     [OK] [OK] [OK] [OK] 
 ft_lstadd_front: [OK] [OK] [OK] 
 ft_lstsize:    [OK] [OK] 
-ft_lstlast:    [MISSING]
-ft_lstadd_back:[MISSING]
-ft_lstdelone:  [MISSING]
-ft_lstclear:   [MISSING]
-ft_lstiter:    [MISSING]
-ft_lstmap:     [MISSING]
+ft_lstlast:    [OK] [OK] 
+ft_lstadd_back:[OK] [OK] [OK] 
+ft_lstdelone:  [OK] 
+ft_lstclear:   [OK] [OK] [OK] 
+ft_lstiter:    [OK] {protected}
+ft_lstmap:     [CRASH] {protected}
+[crash]: your lstmap does not work with basic input
+Test code:
+	t_list *l = lstnew(strdup(" 1 2 3 "));
+	t_list *ret;
+
+	l->next = lstnew(strdup("ss"));
+	l->next->next = lstnew(strdup("-_-"));
+	ret = ft_lstmap(l, lstmap_f, ((void *)0));
+	if (!strcmp(ret->content, "OK !") && !strcmp(ret->next->content, "OK !") && !strcmp(ret->next->next->content, "OK !") && !strcmp(l->content, " 1 2 3 ") && !strcmp(l->next->content, "ss") && !strcmp(l->next->next->content, "-_-"))
+		exit(TEST_SUCCESS);
+	exit(TEST_FAILED);
+
+
 ft_striteri:   [OK] [OK] {not protected}
