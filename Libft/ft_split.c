@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 12:22:30 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/20 14:28:59 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/24 21:12:56 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,17 @@ static unsigned int	ft_wordcnt(char const *s, char c)
 	return (word_cnt);
 }
 
+static void	*ft_arrfree(char **splited, unsigned int list_idx)
+{
+	unsigned int	idx;
+
+	idx = 0;
+	while (idx < list_idx)
+		free(splited[idx++]);
+	free(splited);
+	return (NULL);
+}
+
 static void	ft_putstr(char const *s, unsigned int save_p, \
 		unsigned int idx, char *splited)
 {
@@ -43,13 +54,15 @@ char	**ft_split(char const *s, char c)
 	unsigned int	str_idx;
 	unsigned int	list_idx;
 	unsigned int	save_p;
+	unsigned int	word_cnt;
 
-	splited = (char **)malloc(sizeof(char *) * (ft_wordcnt(s, c) + 1));
+	word_cnt = ft_wordcnt(s, c);
+	splited = (char **)ft_calloc((word_cnt + 1), sizeof(char *));
 	if (splited == NULL)
 		return (NULL);
 	str_idx = 0;
 	list_idx = 0;
-	while (s[str_idx] != '\0' && list_idx < ft_wordcnt(s, c))
+	while (s[str_idx] != '\0' && list_idx < word_cnt)
 	{
 		while (s[str_idx] == c)
 			str_idx++;
@@ -58,9 +71,8 @@ char	**ft_split(char const *s, char c)
 			str_idx++;
 		splited[list_idx] = (char *)malloc(str_idx - save_p + 1);
 		if (splited[list_idx] == NULL)
-			return (NULL);
+			return (ft_arrfree(splited, list_idx));
 		ft_putstr(s, save_p, str_idx, splited[list_idx++]);
 	}
-	splited[list_idx] = NULL;
 	return (splited);
 }
