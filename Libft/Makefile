@@ -6,7 +6,7 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/24 15:40:39 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/11/27 16:30:30 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,11 +66,17 @@ _OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 OBJS = $(addprefix $(OBJDIR)/, $(_OBJS))
 OBJS_BONUS = $(addprefix $(OBJDIR)/, $(_OBJS_BONUS))
 
+ifdef WITH_BONUS
+	OBJ_FILES = $(OBJS) $(OBJS_BONUS)
+else
+	OBJ_FILES = $(OBJS)
+endif
+
 .PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
-$(NAME): $(OBJS) libft.h
+$(NAME): $(OBJ_FILES)
 	$(AR) $(ARFLAGS) $@ $^
 
 clean:
@@ -82,5 +88,5 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJS_BONUS) $(OBJS) libft.h
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS) $(OBJS)
+bonus:
+	make WITH_BONUS=1 all
