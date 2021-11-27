@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:00:58 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/24 15:12:46 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/27 19:24:26 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 
 	current = *lst;
-	if (lst == NULL || del == NULL)
+	if (*lst == NULL || del == NULL)
 		return ;
 	while (current->next != NULL)
 	{

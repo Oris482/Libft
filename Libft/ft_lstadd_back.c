@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:37:29 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/24 15:31:05 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/27 19:25:01 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*back;
 
-	if (lst == NULL || new == NULL)
+	if (new == NULL)
 		return ;
 	if (*lst == NULL)
 	{

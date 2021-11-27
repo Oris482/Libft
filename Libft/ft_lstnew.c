@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:44:36 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/24 14:39:18 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/27 18:37:27 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*node1;
+	t_list	*node;
 
-	node1 = (t_list *)malloc(sizeof(t_list));
-	if (node1 == NULL)
+	node = (t_list *)malloc(sizeof(t_list));
+	if (node == NULL)
 		return (NULL);
-	node1->content = content;
-	node1->next = NULL;
-	return (node1);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
