@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 20:38:12 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 14:33:06 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/27 17:17:29 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	tmp1 = (const unsigned char *)s1;
 	tmp2 = (const unsigned char *)s2;
 	idx = 0;
-	if (n == 0)
-		return (0);
-	while (n > idx)
+	if (n != 0)
 	{
-		if (tmp1[idx] != tmp2[idx])
-			return (tmp1[idx] - tmp2[idx]);
-		idx++;
+		while (n > idx)
+		{
+			if (tmp1[idx] != tmp2[idx])
+				return (tmp1[idx] - tmp2[idx]);
+			idx++;
+		}
 	}
-	if (idx > 0)
-		idx--;
-	return (tmp1[idx] - tmp2[idx]);
+	return (0);
 }
