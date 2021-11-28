@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:34:30 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/23 16:03:56 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2021/11/28 18:51:26 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,16 @@ static int	ft_isspace(char c)
 
 static long	ft_putnum(long result, const char *str)
 {
+	int	digit;
+
+	digit = 0;
 	while (*str > 47 && *str < 58)
 	{
 		result = (result << 1) + (result << 3) + (*str - 48);
 		str++;
-		if (result < 0)
-			break ;
+		digit++;
+		if (result < 0 || digit > 19)
+			return (-1);
 	}
 	return (result);
 }
