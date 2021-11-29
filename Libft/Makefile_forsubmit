@@ -6,7 +6,7 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/27 16:30:30 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/11/29 16:44:37 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
 	$(AR) $(ARFLAGS) $@ $^
+
+%.o: %.c libft.h
 
 clean:
 	$(RM) $(OBJS)
