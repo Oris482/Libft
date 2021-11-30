@@ -6,7 +6,7 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/29 16:54:41 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/11/30 16:39:46 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -I.
 NAME = libft.a
 AR = ar
-ARFLAGS = -rcs
+ARFLAGS = -rcus
 SRCDIR = .
 OBJDIR = .
 SRCS = ft_memset.c	\
