@@ -65,5 +65,5 @@ fclean: clean
 re: fclean all
 #예시
 bonus: $(OBJS)
-	@make "SRCS := $(SRCS) $(SRCS_BONUS)" all
+	@make "SRCS = $(SRCS) $(SRCS_BONUS)" all
 .PHONY: re all fclean

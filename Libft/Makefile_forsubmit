@@ -6,7 +6,7 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/12/02 15:22:40 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/12/02 21:14:59 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,23 +67,20 @@ OBJS = $(addprefix $(OBJDIR)/, $(_OBJS))
 OBJS_BONUS = $(addprefix $(OBJDIR)/, $(_OBJS_BONUS))
 
 ifdef WITH_BONUS
-	OBJ_FILES = $(OBJS) $(OBJS_BONUS)
-else
-	OBJ_FILES = $(OBJS)
+	OBJS += $(OBJS_BONUS)
 endif
 
 .PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
-$(NAME): $(OBJ_FILES)
+$(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 
 %.o: %.c libft.h
 
 clean:
-	$(RM) $(OBJS)
-	$(RM) $(OBJS_BONUS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)
