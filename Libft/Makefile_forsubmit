@@ -6,7 +6,7 @@
 #    By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 14:33:20 by jaesjeon          #+#    #+#              #
-#    Updated: 2021/11/30 20:29:14 by jaesjeon         ###   ########.fr        #
+#    Updated: 2021/12/02 15:22:40 by jaesjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,4 +91,4 @@ fclean: clean
 re: fclean all
 
 bonus:
-	make WITH_BONUS=1 all
+	@make WITH_BONUS=1 all
