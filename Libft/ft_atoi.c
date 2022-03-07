@@ -6,7 +6,7 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:34:30 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/28 18:51:26 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2022/03/07 19:10:52 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,9 @@ int	ft_atoi(const char *str)
 {
 	long	result;
 	int		sign;
-	int		isovered;
 
 	result = 0;
 	sign = 1;
-	isovered = 0;
 	while (ft_isspace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
