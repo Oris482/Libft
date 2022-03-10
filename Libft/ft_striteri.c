@@ -6,11 +6,9 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:19:51 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/22 15:31:14 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2022/03/10 13:41:12 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

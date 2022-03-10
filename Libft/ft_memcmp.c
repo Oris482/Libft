@@ -6,11 +6,9 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 20:38:12 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/27 17:17:29 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2022/03/10 13:39:50 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

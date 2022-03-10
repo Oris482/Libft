@@ -6,11 +6,9 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 20:14:26 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/23 21:12:00 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2022/03/10 13:41:52 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

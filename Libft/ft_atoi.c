@@ -6,11 +6,9 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 21:34:30 by jaesjeon          #+#    #+#             */
-/*   Updated: 2022/03/07 19:10:52 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2022/03/10 13:38:33 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_isspace(char c)
 {

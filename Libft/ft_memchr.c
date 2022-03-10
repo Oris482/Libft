@@ -6,11 +6,9 @@
 /*   By: jaesjeon <jaesjeon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 20:32:57 by jaesjeon          #+#    #+#             */
-/*   Updated: 2021/11/19 13:54:59 by jaesjeon         ###   ########.fr       */
+/*   Updated: 2022/03/10 13:39:45 by jaesjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
